@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding:0;
+}
+.logo
+{
+width:15%;
+justify-content:center;
+align-items:center;
+}
+.logo img
+{
+width:100%;
+border: 3px solid white;
+border-radius: 50px;
+}
+.navbar
+{
+ display: flex;
+align-items: center;
+justify-content: center;
+position: sticky;
+top: 0%;
+cursor:pointer;
+}
+.navlist
+{
+ width: 50%;
+ display: flex;
+ align-items: ;
+}
+.navlist li
+{
+list-style: none;
+padding:40px 10px;
+}
+.navlist li a
+{
+ text-decoration: none;
+ color: orangered;
+}
+.navlist li a:hover
+{
+ text-decoration: none;
+ color: white;
+}
+.rightnav
+{  
+ width:50%;
+ text-align: right;
+ padding: 0 23px;
+}
+#search{;
+    padding: 2px;
+    font-size:15px;
+    border: 2px solid orangered;
+    border-radius: 9px;
+}
+.background
+{
+ background: rgba(0, 0, 0, 0.7)url('../style.css/p3.jpeg');
+ background-size: cover;
+ background-blend-mode: darken;
+}
+.fsection
+{
+height:100vh;
+}
+.mainbox
+{
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: Arial, Helvetica, sans-serif;
+color: orangered;
+max-width:60%;
+margin:auto;
+}
+.fhalf
+{ 
+height:50vh;
+display: flex;
+justify-content: center;
+width: 80%;
+flex-direction:column;
+}
+.shalf
+{
+width:30%;
+}
+.shalf img
+{
+    width: 70%;
+    border: 4px solid white;
+    border-radius:150px;
+    display:block;
+    margin: auto;
+}
+.text-big
+{
+font-size:40px;
+}
+.text-small
+{
+font-size: 20px;
+}
+.btn
+{
+padding: 3px 3px;
+margin:9px 0;
+border:3px solid orangered;
+border-radius:4px;
+font-size: 13px;
+background: none;
+color: azure;
+cursor:pointer;
+}
