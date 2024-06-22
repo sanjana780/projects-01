@@ -1,0 +1,297 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin-bottom: 0.5em;
+    font-size: 2.8em;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f8f8f8;
+}
+
+section {
+    padding: 30px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #333;
+    text-align: center;
+    position: relative;
+    padding-bottom: 0.5em;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h3 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+    color: #333;
+}
+
+p {
+    line-height: 1.8;
+    margin-bottom: 1.5em;
+}
+
+/* Existing styles */
+
+.project-row {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    margin-bottom: 40px;
+}
+
+.project-item {
+    width: 300px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    margin: 0 20px; /* Adjust spacing between items */
+    text-align: center; /* Center text inside project-item */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+
+.project-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover container */
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover img {
+    transform: scale(1.1);
+}
+
+.project-item .project-info {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    opacity: 0; /* Initially hidden */
+}
+
+.project-item:hover .project-info {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.project-info h3 {
+    margin-bottom: 0.5em;
+}
+
+.project-info a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+}
+
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #f8f8f8;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: calc(100% - 22px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+/* Existing styles */
+
+/* Existing styles */
+
+/* Existing styles */
+
+/* Existing styles */
+
+./* Existing styles */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about-details {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically */
+}
+
+.about-details img {
+    width: 200px; /* Adjust the width and height as needed for medium size */
+    height: 200px;
+    object-fit: cover; /* Ensure the image covers the container */
+    border-radius: 50%; /* Makes the image round */
+    overflow: hidden; /* Hide any overflow */
+}
+
+.about-details .about-text {
+    flex: 1; /* Take remaining space */
+    padding-left: 20px; /* Optional: Adds spacing between image and text */
+}
+
+.about-details .about-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-left: -200px;
+}
+
+.about-details .about-text p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#skills {
+    padding: 40px 0;
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skills-grid img {
+    width: 130px; /* Adjust size based on logo dimensions */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.skills-grid img:hover {
+    transform: scale(1.1);
+}
+
+/* Example styling for contact icons */
+
+#contact {
+    background-color: #f2f2f2;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-icon {
+    text-align: center;
+}
+
+.contact-icon img {
+    width: 50px; /* Adjust icon size as needed */
+    height: 50px;
+    display: block;
+    margin: 0 auto 10px; /* Center icon vertically */
+    filter: grayscale(100%); /* Convert image to grayscale */
+}
+
+.contact-icon span {
+    display: block;
+    font-size: 14px;
+    color: #333;
+}
+#footer{
+    background-color: gray;
+}
