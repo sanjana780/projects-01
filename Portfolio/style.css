@@ -9,14 +9,14 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: #f8f8f8;
-    color: #333;
+    background-color: #111;
+    color: #fff;
 }
 
 header {
     background-color: #333;
     color: #fff;
-    padding: 1em;
+    padding: 1em 0;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -48,18 +48,24 @@ nav ul li a:hover {
     color: #f8f8f8;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 section {
     padding: 30px;
-    margin: 20px;
-    background-color: #fff;
+    margin: 20px 0;
+    background-color: #222;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 h2 {
     font-size: 2.5em;
     margin-bottom: 1em;
-    color: #333;
+    color: #fff;
     text-align: center;
     position: relative;
     padding-bottom: 0.5em;
@@ -70,57 +76,121 @@ h2::after {
     display: block;
     width: 50px;
     height: 2px;
-    background-color: #333;
+    background-color: #fff;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
 }
 
-h3 {
-    font-size: 1.8em;
-    margin-bottom: 0.5em;
-    color: #333;
+.about-details {
+    display: flex;
+    align-items: center;
 }
 
-p {
-    line-height: 1.8;
-    margin-bottom: 1.5em;
+.about-details img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
-/* Existing styles */
+.about-text {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-links .btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.social-links .btn:hover {
+    background-color: #555;
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skills-grid .skill {
+    width: 130px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.skills-grid .skill img {
+    max-width: 80%;
+    max-height: 80%;
+    transition: transform 0.3s ease;
+}
+
+.skills-grid .skill:hover img {
+    transform: scale(1.2);
+}
 
 .project-row {
     display: flex;
-    justify-content: center; /* Center items horizontally */
+    justify-content: space-around;
+    gap: 30px;
     margin-bottom: 40px;
 }
 
 .project-item {
-    width: 300px; /* Adjust width as needed */
-    height: 200px; /* Adjust height as needed */
-    margin: 0 20px; /* Adjust spacing between items */
-    text-align: center; /* Center text inside project-item */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    width: 300px;
+    height: 200px;
     position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .project-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Maintain aspect ratio and cover container */
-    border-radius: 8px;
+    object-fit: cover;
     transition: transform 0.3s ease;
 }
 
 .project-item:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-.project-item .project-info {
-    background-color: rgba(0, 0, 0, 0.7);
+.project-info {
+    background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -129,10 +199,10 @@ p {
     left: 0;
     right: 0;
     transform: translateY(100%);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    opacity: 0; /* Initially hidden */
+    opacity: 0;
 }
 
 .project-item:hover .project-info {
@@ -144,129 +214,49 @@ p {
     margin-bottom: 0.5em;
 }
 
-.project-info a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    font-weight: bold;
+.project-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
-
-form {
-    max-width: 500px;
-    margin: 0 auto;
-    background-color: #f8f8f8;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #333;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="tel"] {
-    width: calc(100% - 22px);
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-}
-
-button {
+.project-links .btn {
     background-color: #333;
     color: #fff;
-    padding: 12px 24px;
-    border: none;
+    padding: 8px 16px;
     border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+.project-links .btn:hover {
     background-color: #555;
 }
-/* Existing styles */
 
-/* Existing styles */
-
-/* Existing styles */
-
-/* Existing styles */
-
-./* Existing styles */
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.about-details {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Align items vertically */
-}
-
-.about-details img {
-    width: 200px; /* Adjust the width and height as needed for medium size */
-    height: 200px;
-    object-fit: cover; /* Ensure the image covers the container */
-    border-radius: 50%; /* Makes the image round */
-    overflow: hidden; /* Hide any overflow */
-}
-
-.about-details .about-text {
-    flex: 1; /* Take remaining space */
-    padding-left: 20px; /* Optional: Adds spacing between image and text */
-}
-
-.about-details .about-text h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    margin-left: -200px;
-}
-
-.about-details .about-text p {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-#skills {
-    padding: 40px 0;
-}
-
-.skills-grid {
+.education-row {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    justify-content: space-around;
+    gap: 30px;
+    margin-bottom: 40px;
 }
 
-.skills-grid img {
-    width: 130px; /* Adjust size based on logo dimensions */
-    height: auto; /* Maintain aspect ratio */
+.education-item {
+    width: 300px;
+    height: 150px;
+    padding: 20px;
+    background-color: #333;
     border-radius: 8px;
-    transition: transform 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.skills-grid img:hover {
-    transform: scale(1.1);
+.education-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+    color: #fff;
 }
 
-/* Example styling for contact icons */
-
-#contact {
-    background-color: #f2f2f2;
-    padding: 40px 0;
-    text-align: center;
+.education-item p {
+    color: #ccc;
 }
 
 .contact-icons {
@@ -280,18 +270,66 @@ button:hover {
 }
 
 .contact-icon img {
-    width: 50px; /* Adjust icon size as needed */
+    width: 50px;
     height: 50px;
     display: block;
-    margin: 0 auto 10px; /* Center icon vertically */
-    filter: grayscale(100%); /* Convert image to grayscale */
+    margin: 0 auto 10px;
+    filter: grayscale(100%);
 }
 
 .contact-icon span {
     display: block;
     font-size: 14px;
-    color: #333;
+    color: #fff;
 }
-#footer{
-    background-color: gray;
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #fff;
+}
+
+form input[type="text"],
+form input[type="tel"],
+form input[type="email"] {
+    width: calc(100% - 22px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #444;
+    color: #fff;
+}
+
+form button {
+    background-color: #444;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #666;
+}
+
+#footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
 }
